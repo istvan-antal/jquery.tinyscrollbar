@@ -177,6 +177,8 @@
                     oEvent.preventDefault();
                 }
             }
+			
+            oWrapper.trigger('scroll', [iScroll]);
         }
 
         function drag( event )
@@ -196,6 +198,8 @@
                 oContent.obj.css( sDirection, -iScroll );
                 oThumb.obj.css( sDirection, iPosition.now );
             }
+			
+            oWrapper.trigger('scroll', [iScroll]);
         }
         
         function end()
